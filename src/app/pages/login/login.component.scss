@@ -1,0 +1,153 @@
+#conteiner {
+    width: 100%;
+    place-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcomeText {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 350px;
+    margin-left: 100px;
+    font-size: xx-large;
+    text-align: center;
+    color: #505050;
+}
+
+.linea {
+    border-top: 1px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    color: white;
+}
+
+#austral {
+    align-items: start;
+    
+    img {
+        height: 40px;
+    };
+    p {
+        font-size: x-large;
+        margin-bottom: 10px;
+    }
+}
+
+#conteiner-login {
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    margin: auto;
+    margin-top: 5px;
+    width: 800px;
+    height: 405px;
+    border-radius: 25px;
+    box-shadow: inset 1px 1px 34px 13px rgba(0,0,0,0.75);
+
+    background: 
+        linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+        linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+        linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+        background-color:#e1ebbd;
+        background-size: 128px 128px;
+}
+
+form {
+    margin:auto;
+    height: 200px;
+    background-color: #cad2c5 ;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1px 1px 34px 10px rgba(0,0,0,0.75);
+}
+
+#login {
+    max-width: 450px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 30px;
+}
+
+input {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    caret-color: white;
+}
+
+input::placeholder {
+    padding-left: 15px;
+}
+
+#opciones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#opciones button {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #5c8265;
+    color: white;
+    &[disabled] {
+        background-color: grey;
+        color: #505050;
+        cursor: not-allowed;
+    }
+}
+
+#opciones a {
+    padding-top: 5px;
+}
+
+.error {
+    color: rgb(187, 42, 42);
+}
+
+.space {
+    color: #cad2c5;
+}
+
+
+@media (width <= 360px){
+
+    #conteiner {
+        flex-wrap: wrap;
+    }
+    .welcomeText{
+        display: none;
+
+    }
+    #conteiner-login {
+        border-radius: 0;
+        width: 100%;
+        height: 450px;
+
+        form {
+            width: 80%;
+        }
+    }
+}

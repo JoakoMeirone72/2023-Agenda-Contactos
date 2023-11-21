@@ -1,0 +1,39 @@
+<div id="conteiner">
+    
+    <img id="alert1" src="../../../assets/img/9 sin título_20230901135155.png">
+    
+    <div id="conteiner-register">
+        <form #registerform="ngForm" class="flex-columns">
+            
+            <div id="register">
+                <h3 id="titulo">Registro de Usuario</h3>
+                
+                <input type="text" name="firstname" id="firstname" placeholder="Nombre" minlength="4" required [(ngModel)]="registerData.Firstname">
+                <p *ngIf="registerform.value.firstname.length < 4" class="error">*El usuario debe contener un mínimo de 4 carácteres*</p>
+                <p *ngIf="registerform.value.firstname.length >= 4" class="space">-</p>
+                
+                <input type="lastname" name="lastname" id="lastname" placeholder="Apellido" minlength="4" required [(ngModel)]="registerData.Lastname">
+                <p *ngIf="registerform.value.lastname.length < 4" class="error">*El email debe contener un mínimo de 4 carácteres*</p>
+                <p *ngIf="registerform.value.lastname.length >= 4" class="space">-</p>
+                
+                <input type="email" name="email" id="email" placeholder="Email" minlength="5" required [(ngModel)]="registerData.Email">
+                <p *ngIf="!registerform.value.email" class="error">*Este campo es obligatorio*</p>
+                <p *ngIf="registerform.value.email" class="space">-</p>
+                
+                <input type="password" name="password" id="password" placeholder="Contraseña" minlength="8" required [(ngModel)]="registerData.Password">
+                <p *ngIf="registerform.value.password.length < 8" class="error">*La contraseña debe contener un mínimo de 8 carácteres*</p>
+                <p *ngIf="registerform.value.password.length >= 8" class="space">-</p>
+                
+            </div>
+            
+            <div id="opciones">
+                <a [routerLink]="['/login']" routerLinkActive="router-link-active">Ya tenés Cuenta?</a>
+                <button type="submit" [disabled]="registerform.invalid" (click)="register()">Registrarse</button>
+            </div>
+            
+        </form>
+    </div>
+        
+    <img id="alert2" src="../../../assets/img/9 sin título_20230901134914.png">
+
+</div>

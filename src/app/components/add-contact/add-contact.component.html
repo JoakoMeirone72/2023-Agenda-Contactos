@@ -1,0 +1,31 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <h2>{{contacto.id ? "Editar contacto" : "Agregar Contacto"}}</h2>
+    <div class="formulario">
+        
+            <label for="">Nombre</label>
+            <input type="text" [(ngModel)]="contacto.name" name="nombre">
+    
+            <label for="">Apellido</label>
+            <input type="text" [(ngModel)]="contacto.lastName" name="apellido">
+        
+            <label for="">Direccion</label>
+            <input type="text" [(ngModel)]="contacto.address" name="direccion">
+        
+            <label for="">Email</label>
+            <input type="email" [(ngModel)]="contacto.email" name="email">
+        
+            <label for="">Telefono</label>
+            <input type="text" [(ngModel)]="contacto.number" name="telefono">
+        
+            <label for="">Empresa</label>
+            <input type="text" [(ngModel)]="contacto.company" name="empresa">
+        
+            <label for="">Foto</label>
+            <input type="text" [(ngModel)]="contacto.image" name="img">
+
+    </div>
+    <div class="options">
+        <button id="agregar" type="submit">{{contacto.id ? "Editar" : "Agregar"}}</button>
+        <button id="cancelar" type="button" (click)="cerrar.emit()">Cancelar</button>
+    </div>
+</form>

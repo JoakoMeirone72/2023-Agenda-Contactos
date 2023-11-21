@@ -1,0 +1,15 @@
+#conteiner {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#conteiner img {
+    inset: 0;
+    margin: auto;
+    width: 50%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}

@@ -1,0 +1,56 @@
+
+.conteiner {
+    background-color: #83c5be;
+    background: linear-gradient(to left, #83c5be, #486c68);
+    text-align: center;
+    font-size: 20px;
+    max-width: 100%; 
+    color: rgb(230, 237, 239);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    
+}
+
+#copyright {
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+#slogan {
+    margin-left: 70px;
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+.info {
+    align-items: flex-end;
+}
+
+#contact {
+    margin-left: 110px;
+    color: #5b63be;
+}
+
+@media (width <= 360px){
+    .conteiner{
+        flex-direction: column;
+    }
+    #slogan {
+        font-size: 25px;
+        padding-top: 0;
+        margin-left: 0;
+    }
+    #copyright {
+        display: none;
+    }
+    .info {
+        p {
+            display: none;
+        }
+        #contact {
+            font-size: smaller;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+#conteiner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#alert1 {
+    margin-left: 50px;
+    height: 225px;
+    margin-top: 220px;
+    margin-right: 20px;
+}
+
+#alert2 {
+    height: 250px;
+    margin-bottom: 200px;
+    margin-left: 15px;
+}
+
+#conteiner-register {
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    margin: auto;
+    width: 950px;
+    height: 450px;
+    border-radius: 25px;
+    box-shadow: inset 1px 1px 34px 13px rgba(0,0,0,0.75);
+
+    
+    background: 
+        linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+        linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+        linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+        background-color:#e1ebbd;
+        background-size: 128px 128px;
+}
+
+.flex-columns {
+    width: 600px;
+    height: 300px;
+    background-color: #cad2c5 ;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 34px 10px rgba(0,0,0,0.75);
+}
+
+#register {
+    max-width: 700px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 30px; 
+}
+
+input {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    caret-color: white;
+}
+
+input::placeholder {
+    padding-left: 15px;
+}
+
+#opciones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#opciones button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #5c8265;
+    color: white;
+    &[disabled] {
+        background-color: grey;
+        color: #505050;
+        cursor: not-allowed;
+    }
+}
+
+#opciones a {
+    padding-top: 15px;
+}
+
+.error {
+    color: rgb(187, 42, 42);
+}
+
+.space {
+    color: #cad2c5;
+}
+
+@media (width <= 360px){
+    img {
+        display: none;
+    }
+    #conteiner-register {
+        width: 100%;
+        height: 530px;
+        border-radius: 0;
+
+        form {
+            height: 62%;
+            width: 80%;
+            font-size: smaller;
+        }
+    }
+}

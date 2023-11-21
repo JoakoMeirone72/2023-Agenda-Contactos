@@ -1,0 +1,49 @@
+.tarjeta-contacto {
+    inset: 0;
+    margin: auto;
+    padding: 10px 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 3fr 3fr 3fr 3fr;
+    cursor: pointer;
+    background-color: #ebeeed;
+    border-bottom-width: thin;
+    border-bottom-color: #CCC;
+    font-size: 20px;
+    &:hover {
+        background-color: #92baac;
+    }
+    p {
+        color: black;
+        inset: 0;
+        margin: auto;
+    }
+}
+
+@media (width <= 360px){
+    
+    
+    .tarjeta-contacto {
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 18px;
+    }
+
+    #direccion {
+        display: none;
+    }
+    #email {
+        display: none;
+    }
+    #telefono {
+        display: none;
+    }
+    #empresa {
+        display: none;
+    }
+
+    app-icon-contact {
+        margin: 0;
+        margin-left: -20px;
+        width: 100px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="background">
+    <div class="conteiner">
+        <div class="contacts-conteiner">
+            <div *ngFor="let contacto of contacts" class="contact">
+                <app-card-contact [contacto]="contacto" [routerLink]="[contacto.id]"></app-card-contact>
+            </div>
+        </div>
+
+        
+    </div>
+    <button class="addButton" (click)="dialogNuevoContacto.showModal()">+</button>
+
+    <dialog method="dialog" #dialogNuevoContacto>
+        <app-add-contact (cerrar)="dialogNuevoContacto.close()"></app-add-contact>
+    </dialog>
+</div>

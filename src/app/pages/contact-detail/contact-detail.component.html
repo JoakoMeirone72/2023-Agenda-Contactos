@@ -1,0 +1,50 @@
+<div class="background">
+    <a [routerLink]="['/view-contacts']" routerLinkActive="router-link-active">
+        <div id="back">
+            <p>🢀 VOLVER</p>
+        </div>
+    </a>
+    <div class="conteiner">
+        <div class="info-principal">
+            <div class="border-img">
+                <img class="foto" *ngIf="contacto.image" [src]="[contacto.image]">
+                <img class="nofoto" *ngIf="!contacto.image" src="./../../../assets/img/fotoPerfil.png">
+            </div>
+            <div class="conteiner2">
+                <div class="conteiner-name-options">
+                    <p id="name">{{contacto.name}} {{contacto.lastName}}</p>
+                    <div class="options">
+                        <button class="Button" id="delete" (click)="DeleteContact()">Eliminar  ❌</button>
+                        <button class="Button" (click)="modalEdit.showModal()">Editar 🖊️</button>
+                        <dialog method="modal" #modalEdit>
+                            <app-add-contact (cerrar)="modalEdit.close()" [contacto]="contacto"></app-add-contact>
+                        </dialog>
+                    </div>
+                </div>
+                <div id="linea"></div>
+            </div>
+        </div>
+        <div class="info-adicional">
+            <div class="info">
+                <label for="">Dirección</label>
+                <div id="linea"></div>
+                <p>{{contacto.address}}</p>
+            </div>
+            <div class="info">
+                <label for="">Email</label>
+                <div id="linea"></div>
+                <p>{{contacto.email}}</p>
+            </div>
+            <div class="info">
+                <label for="">Telefono</label>
+                <div id="linea"></div>
+                <p>{{contacto.number}}</p>
+            </div>
+            <div class="info">
+                <label for="">Empresa</label>
+                <div id="linea"></div>
+                <p>{{contacto.company}}</p>
+            </div>
+        </div>
+    </div>
+</div>

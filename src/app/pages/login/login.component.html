@@ -1,0 +1,42 @@
+<div id="conteiner">
+    <div class="welcomeText">
+
+        <div class="linea">----------------------------------------------------</div>
+        <p id="top">Somos AGDA, tu agenda de contactos</p>
+        <p id="middle">Conectate y administra tus contactos!</p>
+        <p id="bottom">Actividad Programación Web Frontend</p>
+
+        <div class="linea">----------------------------------------------------</div>
+
+        <div id="austral">
+            <p>Universidad Austral</p>
+            <img src="https://campusvirtual.austral.edu.ar/pluginfile.php/1/theme_austral_fcer_40/favicon/1692995403/favicon-UA%20%284%29%20%281%29%20%281%29.png">
+        </div>
+    </div>
+    <div id="conteiner-login">
+        <form #loginform="ngForm" (ngSubmit)="login()" class="flex-columns">
+            <h3 id="titulo">Inicio de Sesión</h3>
+
+            <div id="login">
+
+                <input type="text" placeholder="Usuario" name="user" id="user" required [(ngModel)]="loginData.Email">
+                <p *ngIf="!loginform.value.user" class="error">*este campo es requerido*</p>
+                <p *ngIf="loginform.value.user" class="space">-</p>
+
+                <input type="password" placeholder="Contraseña" name="password" id="password" minlength="8" required [(ngModel)]="loginData.Password">
+                <p *ngIf="loginform.value.password.length < 8" class="error">*La contraseña debe contener un mínimo de 8 carácteres*</p>
+                <p *ngIf="loginform.value.password.length >= 8" class="space">*La contraseña debe contener un mínimo de 8 carácteres*</p>
+
+            </div>
+
+            <div id="login">   
+                <p *ngIf="errorLogin()" class="error">Error al iniciar sesión</p>
+            </div>
+            <div id="opciones">
+                <a [routerLink]="['/register']" routerLinkActive="router-link-active">Registrate aquí</a>
+                <button type="submit" [disabled]="loginform.invalid">Iniciar sesión</button>
+            </div>
+        </form>
+    </div>
+
+</div>
